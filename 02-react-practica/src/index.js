@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+const persona = {
+  nombre: "Tony",
+  edad: 45,
+  direccion:{
+    ciudad: "New York",
+    zip: 4587452,
+    lat:103586,
+    long:7896415 
+  }
+};
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+//Copiando las propiedades de un objeto a otro con el Spread Operator
+const persona2 = {...persona};
+persona2.nombre = "Peter";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+console.log(persona)
+console.log(persona2)
