@@ -16,8 +16,8 @@ console.log( nombre2 )
 */
 
 console.log(nombre)
-// console.log(persona.edad)
-// console.log(persona.clave)
+console.log(persona.edad)
+console.log(persona.clave)
 
 // Para extraer mas valores 
 const { edad, nombre:nombre2, clave } = persona
@@ -26,9 +26,32 @@ console.log( clave );
 console.log( edad );
 console.log( nombre2 );
 
+const retornaPersona = ( persona ) =>{
+  const { edad, nombre:nombre2, clave } = persona
+  console.log(edad, clave, nombre2)
+
+}
+retornaPersona ( persona );
 
 
+// Desestructuracion en el argumento
+// Podemos adignarle un valor en los mismos argumentos
+const contexto = ({nombre, edad, rango = "Capitan"}) =>{
 
+
+  return{
+    nombreClave: clave,
+    anios: edad,
+    lat:456785
+  }
+
+}
+const avenger = contexto (persona)
+console.log (avenger)
+
+// Extrallendo los valores del objeto Avenger
+const {nombreClave, anios, lat} = avenger
+console.log(nombreClave, anios, lat)
 
 
 
