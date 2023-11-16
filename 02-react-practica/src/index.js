@@ -1,4 +1,3 @@
-// PROMESAS
 import {getHeroeByID} from "./bases/08-import-export"
 
 const promesa = new Promise( (resolve, reject) => {
@@ -12,4 +11,3 @@ const promesa = new Promise( (resolve, reject) => {
 promesa.then( ()=>{
     console.log("Then de la promesa")
 } )
-
